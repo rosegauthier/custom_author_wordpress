@@ -1,0 +1,68 @@
+body {
+	font-family: 'Merriweather', serif;
+	font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+	margin: 0;
+}
+
+h2 {
+	position: relative;
+	padding: 10px 0;
+	font-family: $sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: rgba(0,0,0,0.7);
+}
+
+.section-title {
+	text-align: center;
+	font-family: $heading-font;
+	font-size: 24px;
+	color: #737373;
+	letter-spacing: 1.5px;
+	&::after {
+		@include keyline(calc(50% - 30px), 60px, #D5D2CD);
+	}
+}
+
+h3 {
+	position: relative;
+	padding: 10px 0;
+}
+
+p {
+	margin: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+.outer-wrapper {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.container-small {
+	max-width: 730px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.full {
+	width: 100%;
+}

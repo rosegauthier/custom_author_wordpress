@@ -1,0 +1,101 @@
+header {
+	position: relative;
+	@media all and (max-width: 768px) {
+		position: static;
+	}
+	.header-bar {
+		padding: 20px 50px;
+		background: $subtle-overlay;
+	}
+}
+
+.hero-image {
+	height: 700px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	@media all and (max-width: 768px) {
+		height: auto;
+		background-size: 800px 100%;
+		background-attachment: scroll;
+	}
+}
+
+.blog-hero-image {
+	height: 400px;
+}
+
+.contact-about-hero-image {
+	height: 500px;
+	margin-bottom: 80px;
+}
+
+h1 {
+	float: left;
+}
+
+.feature {
+	padding-top: 150px;
+	text-align: center;
+	@media all and (max-width: 768px) {
+		padding-top: 50px;
+	}
+	.feature-info {
+		display: inline-block;
+		width: 70%;
+		max-width: 610px;
+		padding: 45px 40px;
+		text-align: left;
+		vertical-align: top;
+		color: white;
+		text-shadow: 2px 2px 1px black;
+		@media all and (max-width: 768px) {
+			width: 100%;
+		}
+		h2 {
+			padding-bottom: 20px;
+			font-size: 60px;
+			font-family: $heading-font;
+			font-weight: bold;
+			color: white;
+			text-transform: none;
+			line-height: 1;
+			@media all and (max-width: 550px) {
+				font-size: 40px;
+			}
+		}
+		p {
+			padding-bottom: 30px;
+			letter-spacing: 1px;
+		}
+		p:first-of-type {
+			font-family: $sans-serif;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.feature-book {
+	position: relative;
+	display: inline-block;
+	max-width: 345px;
+	border-radius: 2px;
+	overflow: hidden;
+	box-shadow: $box-shadow;
+	@media all and (max-width: 975px) {
+		max-width: 200px;
+		box-shadow: 0 15px 10px -6px rgba(0, 0, 0, 0.8);
+	}
+	img {
+		display: block;
+	}
+	.feature-image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 3%;
+		box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3), inset 3px 0 10px rgba(255, 255, 255, 0.3);
+	}
+}

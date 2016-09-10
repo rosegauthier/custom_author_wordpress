@@ -1,3 +1,22 @@
 footer {
 	clear: both;
+	padding: 25px 0;
+	background-color: #252420;
+	@media all and (max-width: 550px) {
+		text-align: center;
+	}
+	#menu-social-navigation {
+		@media all and (max-width: 550px) {
+			float: none;
+		}
+	}
+	p {
+		float: right;
+		color: #62615F;
+		@media all and (max-width: 550px) {
+			float: none;
+			width: 100%;
+			padding-top: 20px;
+		}
+	}
 }

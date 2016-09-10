@@ -1,0 +1,33 @@
+.genres {
+	padding: 150px 0 110px 0;
+	background-color: $background;
+	text-align: center;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		@media all and (max-width: 768px) {
+			display: block;
+		}
+	}
+	.single-genre {
+		flex-basis: 33.3%;
+		padding: 40px;
+		img {
+			max-width: 80px;
+			margin-bottom: 10px;
+		}
+		h3 {
+			color: $offcolor-heading;
+		}
+		h3::after {
+			@include keyline(calc(50% - 30px), 60px, #D5D2CD);
+		}
+		p {
+			padding: 20px 0;
+			color: $contrast-text-bkg;
+			@media all and (max-width: 550px) {
+				display: none;
+			}
+		}
+	}
+}

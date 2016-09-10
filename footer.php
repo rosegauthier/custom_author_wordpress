@@ -1,8 +1,15 @@
-<footer>
-  <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
-  </div>
-</footer>
+	<footer>
+	  <div class="container clearfix">
+		<?php 
+			wp_nav_menu( array(
+				'container' => false,
+				'theme_location' => 'social'
+			) );
+		 ?>
+		<p>&copy; Rose Gauthier <?php echo date('Y'); ?></p>
+		 </div>
+	</footer>
+</div> <!-- .outer-wrapper -->
 
 <script>
 // scripts.js, plugins.js and jquery are enqueued in functions.php

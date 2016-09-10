@@ -1,0 +1,103 @@
+.countdown {
+	position: relative;
+	height: 660px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	@media all and (max-width: 550px) {
+		height: 450px;
+	}
+	.countdown-overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.7);
+		color: white;
+		#release-date {
+			display: flex;	
+			justify-content: space-around;
+			padding-top: 200px;
+			padding-bottom: 100px;
+			text-align: center;
+			@media all and (max-width: 550px) {
+				padding-top: 75px;
+				padding-bottom: 75px;
+			}
+			span {
+				font-family: $heading-font;
+				font-size: 60px;
+				letter-spacing: 2px;
+				color: $countdown;
+				@media all and (max-width: 550px) {
+					font-size: 35px;
+				}
+			}
+			p {
+				color: $countdown;
+			}
+		}
+		p {
+			padding-top: 30px;
+			text-align: center;
+			font-family: $sans-serif;
+			font-weight: 300;
+			letter-spacing: 2px;
+			@media all and (max-width: 550px) {
+				padding-top: 20px;
+				font-size: 12px;
+			}
+		}
+		form {
+			text-align: center;
+		}
+		.countdown-email {
+			position: relative;
+			display: inline-block;
+			height: 40px;
+			input[type="email"] {
+				height: 40px;
+				padding: 0 10px 0 20px;
+				background-color: transparent;
+				border-radius: 20px;
+				border: 2px solid rgba(255,255,255,0.2);
+				font-style: italic;
+				@media all and (max-width: 550px) {
+					max-width: 270px;
+				}
+				&:hover {
+					background-color: rgba(255, 255, 255, 0.3);
+				}
+				&:focus {
+					background-color: rgba(255, 255, 255, 0.3);	
+				}
+			}
+			input[type="submit"] {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				padding: 5px 10px;
+				background-color: transparent;
+				border: none;
+				border-left: 1px solid #A4A4A4;
+				font-family: $sans-serif;
+				font-style: bold;
+				text-transform: uppercase;
+				color: rgba(255, 255, 255, 0.5);
+			}
+		}
+		label {
+				color: rgba(255, 255, 255, 0.5);
+				text-transform: none;
+				font-weight: 300;
+		}
+	}
+}
+
+.about-countdown .countdown-overlay #release-date {
+	@media all and (max-width: 550px) {
+		padding-top: 150px;
+	}
+}

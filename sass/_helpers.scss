@@ -1,0 +1,12 @@
+@mixin keyline ($left, $width, $color) {
+	position: absolute;
+	bottom: 0;
+	left: $left;
+	width: $width;
+	content: '';
+	border-bottom: 2px solid $color;
+}
+
+$primary-font: 'Merriweather', serif;
+$heading-font: 'Arapey', serif;
+$sans-serif: 'Lato', sans-serif;

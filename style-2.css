@@ -181,7 +181,7 @@ a {
 }
 
 a:hover {
-  color: #F07D28;
+  color: #0265CC;
 }
 
 /* paragraphs */
@@ -352,7 +352,7 @@ header {
 
 header .header-bar {
   padding: 20px 50px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-image {
@@ -444,7 +444,7 @@ h1 {
   max-width: 345px;
   border-radius: 2px;
   overflow: hidden;
-  box-shadow: 0 15px 10px -6px #a8a7a7;
+  box-shadow: 0 15px 10px -6px rgba(0, 0, 0, 0.8);
 }
 
 @media all and (max-width: 975px) {
@@ -468,7 +468,7 @@ h1 {
 }
 
 h1 a {
-  color: black;
+  color: white;
 }
 
 header .menu {
@@ -518,11 +518,11 @@ header .menu li a {
   padding: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: black;
+  color: white;
 }
 
 header .menu li a:hover, header .menu li a:focus {
-  color: #F07D28;
+  color: #0265CC;
 }
 
 @media all and (max-width: 768px) {
@@ -540,7 +540,7 @@ header .menu li a:hover::after {
   left: calc(50% - 20px);
   width: 40px;
   content: '';
-  border-bottom: 2px solid #F07D28;
+  border-bottom: 2px solid #0265CC;
 }
 
 .hamburger {
@@ -581,7 +581,7 @@ header .menu li a:hover::after {
 
 .genres {
   padding: 150px 0 110px 0;
-  background-color: #EFECE6;
+  background-color: white;
   text-align: center;
 }
 
@@ -613,7 +613,7 @@ header .menu li a:hover::after {
 }
 
 .genres .single-genre h3 {
-  color: black;
+  color: white;
 }
 
 .genres .single-genre h3::after {
@@ -627,7 +627,7 @@ header .menu li a:hover::after {
 
 .genres .single-genre p {
   padding: 20px 0;
-  color: #7F7F7F;
+  color: white;
 }
 
 @media all and (max-width: 550px) {
@@ -931,12 +931,12 @@ header .menu li a:hover::after {
 .book-synopsis #tags {
   margin-bottom: 40px;
   padding: 30px 0;
-  border-top: 1px dashed #F07D28;
-  border-bottom: 1px dashed #F07D28;
+  border-top: 1px dashed #0265CC;
+  border-bottom: 1px dashed #0265CC;
 }
 
 .book-synopsis #tags::before {
-  color: #F07D28;
+  color: #0265CC;
   content: "\201C";
   font-size: 70px;
   margin-right: 30px;
@@ -955,7 +955,7 @@ header .menu li a:hover::after {
   position: relative;
   height: 300px;
   margin: 200px 0;
-  background-color: #EFECE6;
+  background-color: white;
 }
 
 .about-feature-book {
@@ -1047,7 +1047,7 @@ header .menu li a:hover::after {
 .blog-post .read-more {
   display: block;
   padding: 10px;
-  color: #F07D28;
+  color: #0265CC;
 }
 
 .blog-post .read-more:hover {
@@ -1066,7 +1066,7 @@ header .menu li a:hover::after {
 }
 
 .comments-counter:hover {
-  color: #F07D28;
+  color: #0265CC;
 }
 
 .pagination {
@@ -1097,7 +1097,7 @@ header .menu li a:hover::after {
 }
 
 .pagination .nav-links .page-numbers.current {
-  background-color: #F07D28;
+  background-color: #0265CC;
   border: 2px solid transparent;
   color: white;
 }
@@ -1150,7 +1150,7 @@ header .menu li a:hover::after {
 }
 
 .single-blog-container .nav-previous a:hover, .single-blog-container .nav-next a:hover {
-  color: #F07D28;
+  color: #0265CC;
 }
 
 .single-blog-container .nav-previous {
@@ -1221,7 +1221,7 @@ header .menu li a:hover::after {
 }
 
 .contact-heading {
-  color: #737373;
+  color: black;
 }
 
 #wpcf7-f86-p84-o1, #wpcf7-f86-p70-o2 {
@@ -1278,14 +1278,14 @@ header .menu li a:hover::after {
   height: 40px;
   padding: 10px;
   border: none;
-  border-bottom: 2px solid #D5D6D5;
+  border-bottom: 2px solid black;
   outline: none;
   font-family: "Lato", sans-serif;
   font-style: italic;
 }
 
 #wpcf7-f86-p84-o1 textarea:focus, #wpcf7-f86-p84-o1 input:focus, #wpcf7-f86-p70-o2 textarea:focus, #wpcf7-f86-p70-o2 input:focus {
-  border-bottom: 2px solid #F07D28;
+  border-bottom: 2px solid #0265CC;
 }
 
 #wpcf7-f86-p84-o1 input.wpcf7-submit, #wpcf7-f86-p70-o2 input.wpcf7-submit {
@@ -1293,16 +1293,16 @@ header .menu li a:hover::after {
   margin-top: 50px;
   padding: 6px 0;
   background: transparent;
-  border: 3px solid #F07D28;
+  border: 3px solid #0265CC;
   border-radius: 50px;
   font-size: 12px;
   text-transform: uppercase;
   font-style: bold;
-  color: #F07D28;
+  color: #0265CC;
 }
 
 #wpcf7-f86-p84-o1 input.wpcf7-submit:hover, #wpcf7-f86-p70-o2 input.wpcf7-submit:hover {
-  background-color: #F07D28;
+  background-color: #0265CC;
   color: white;
 }
 
@@ -1316,11 +1316,11 @@ header .menu li a:hover::after {
 
 .front-page-contact {
   padding-top: 100px;
-  background-color: #EFECE6;
+  background-color: white;
 }
 
 .front-page-contact input, .front-page-contact textarea {
-  background-color: #EFECE6;
+  background-color: white;
 }
 
 .sidebar {
@@ -1595,14 +1595,14 @@ h3#reply-title {
   height: 40px;
   padding: 10px;
   border: none;
-  border-bottom: 2px solid #D5D6D5;
+  border-bottom: 2px solid black;
   outline: none;
   font-family: "Lato", sans-serif;
   font-style: italic;
 }
 
 #respond textarea:focus, #respond input:focus {
-  border-bottom: 2px solid #F07D28;
+  border-bottom: 2px solid #0265CC;
 }
 
 #respond dt {
@@ -1631,16 +1631,16 @@ h3#reply-title {
   margin-top: 50px;
   padding: 6px 0;
   background: transparent;
-  border: 3px solid #F07D28;
+  border: 3px solid #0265CC;
   border-radius: 50px;
   font-size: 12px;
   text-transform: uppercase;
   font-style: bold;
-  color: #F07D28;
+  color: #0265CC;
 }
 
 #respond .form-submit input#submit:hover {
-  background-color: #F07D28;
+  background-color: #0265CC;
   color: white;
 }
 

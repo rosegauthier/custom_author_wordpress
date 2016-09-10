@@ -26,7 +26,8 @@ function theme_setup() {
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
 	register_nav_menus( array(
-		'primary' => 'Primary Navigation'
+		'primary' => 'Primary Navigation',
+		'social' => 'Social Navigation'
 	) );
 
 	/*
@@ -48,10 +49,19 @@ We'll let WordPress add them to our templates automatically instead
 of writing our own link tags in the header. */
 
 function hackeryou_styles(){
-	wp_enqueue_style('style', get_stylesheet_uri() );
+	$myOption = get_field('stylesheet', 'options'); 
+	 if($myOption === 'Light') {
+		wp_enqueue_style('style', get_stylesheet_uri() );	
+	 } else {
+		wp_enqueue_style('style-2', get_template_directory_uri() . '/style-2.css' );
+	 }
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Arapey:400,400i|Lato:300,400,700|Merriweather:300,400i');
 }
+
+
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
 /* Add all our JavaScript files here.
@@ -131,7 +141,7 @@ add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
  * Sets the post excerpt length to 40 characters.
  */
 function hackeryou_excerpt_length( $length ) {
-	return 40;
+	return 30;
 }
 add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
 
@@ -139,7 +149,7 @@ add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
  * Returns a "Continue Reading" link for excerpts
  */
 function hackeryou_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">Continue reading <span class="meta-nav">&rarr;</span></a>';
+	return ' <a href="'. get_permalink() . '" class="read-more">Continue reading</a>';
 }
 
 /**
@@ -160,6 +170,7 @@ function hackeryou_custom_excerpt_more( $output ) {
 	return $output;
 }
 add_filter( 'get_the_excerpt', 'hackeryou_custom_excerpt_more' );
+
 
 
 /*
@@ -195,6 +206,21 @@ add_action( 'widgets_init', 'hackeryou_remove_recent_comments_style' );
 
 
 if ( ! function_exists( 'hackeryou_posted_on' ) ) :
+
+/** 
+*Re-order Comment Form
+*/
+
+function wpb_move_comment_field_to_bottom( $fields ) {
+	$comment_field = $fields['comment'];
+	unset( $fields['comment'] );
+	$fields['comment'] = $comment_field;
+	return $fields;
+}
+
+add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
+
+
 /**
  * Prints HTML with meta information for the current post—date/time and author.
  */
@@ -280,4 +306,12 @@ function get_post_parent($post) {
 	else {
 		return $post->ID;
 	}
+}
+
+/* */
+function hackeryou_featured_image_url($post) {
+	$image_id = get_post_thumbnail_id($post->ID);
+	$image_url = wp_get_attachment_url($image_id);
+
+	return $image_url;
 }

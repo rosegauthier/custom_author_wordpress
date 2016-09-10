@@ -26,10 +26,9 @@ gulp.task('styles', function() {
 		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(minifyCSS())
-		.pipe(concat('style.css'))
 		.pipe(autoprefixer('last 5 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('./'))
+		.pipe(gulp.dest('./css'))
 		.pipe(reload({ stream: true }));
 });
 

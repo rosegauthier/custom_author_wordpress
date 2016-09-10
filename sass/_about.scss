@@ -1,0 +1,61 @@
+.about-feature-title {
+	margin-top: 40px;
+	margin-bottom: 20px;
+	text-transform: none;
+	font-size: 30px;
+	font-family: $heading-font;
+	color: black;
+	font-weight: 700;
+}
+
+.book-description {
+	margin-bottom: 100px;
+}
+
+.book-synopsis {
+	margin-bottom: 100px;
+	h2 {
+		margin: 90px 0 45px 0;
+	}
+	h3 {
+		margin: 30px 0;
+		font-size: 40px;
+		font-family: $heading-font;
+		color: black;
+		font-weight: 700;
+	}
+	#tags {
+		margin-bottom: 40px;
+		padding: 30px 0;
+		border-top: 1px dashed $accent-1;
+		border-bottom: 1px dashed $accent-1;
+		&::before {
+			color: $accent-1;
+  			content: "\201C";
+			font-size: 70px;
+			margin-right: 30px;
+			vertical-align: top;
+		}
+		#units {
+			display: inline-block;
+			width: 80%;
+			font-size: 24px;
+			font-family: $heading-font;
+			font-style: italic;
+		}
+	}
+}
+
+.about-feature {
+	position: relative;
+	height: 300px;
+	margin: 200px 0;
+	background-color: $background;
+
+}
+.about-feature-book {
+	position: absolute;
+	top: -80px;
+	left: calc(50% - 172px);
+	width: 345px;
+}

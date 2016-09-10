@@ -1,0 +1,92 @@
+.story {
+	padding: 90px 0 115px 0;
+	h2 {
+		text-align: center;
+		&::after {
+			@include keyline(calc(50% - 30px), 60px, #E5E5E5);
+		}
+	}
+	.story-description-info {
+		float: left;
+		width: 50%;
+		h3 {
+			padding: 0 0 25px 0;
+			font-family: $heading-font;
+			font-size: 40px;
+		}
+		.overview-heading {
+			text-transform: uppercase;
+			font-size: 25px;
+		}
+		p {
+			padding-bottom: 25px;
+			line-height: 2;
+			@media all and (max-width: 768px) {
+				padding: 0;
+			}
+		}
+		
+	}
+	.story-description-image, .story-synopsis-image {
+		max-width: 525px;
+		height: 295px;
+		padding-left: 20px;
+		overflow: hidden;
+		@media all and (max-width: 768px) {
+			display: inline-block;
+			width: 80%;
+			height: auto;
+			text-align: center;
+		}
+	}
+}
+
+.story-description {
+	padding: 50px 10px;
+	&:nth-of-type(1) {
+		.half-container {
+			float: right;
+			@media all and (max-width: 768px) {
+				float: none;
+			}
+		}
+		.story-description-info {
+			float: right;
+			padding-right: 30px;
+			text-align: right;
+			@media all and (max-width: 768px) {
+				float: none;
+				width: 90%;
+				margin: 0 auto;
+				padding: 0;
+				text-align: left;
+			}
+		}
+	}
+	&:nth-of-type(2) .story-description-info {
+		padding-left: 30px;
+		@media all and (max-width: 768px) {
+			width: 90%;
+			margin: 0 auto;
+			padding: 0;
+			text-align: left;
+		}
+	}
+}
+
+.half-container	{
+	float: left;
+	width: 50%;
+	&:first-child {
+		text-align: right;
+		@media all and (max-width: 768px) {
+			text-align: center;
+		}
+	}
+	@media all and (max-width: 768px) {
+		float: none;
+		width: 100%;
+		padding-bottom: 40px;
+		text-align: center;
+	}
+}
